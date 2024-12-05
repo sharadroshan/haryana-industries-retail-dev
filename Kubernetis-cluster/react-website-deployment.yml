@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-react-website-frontend-app
+  annotations:
+    strategy.kubernetes.io/type: RollingUpdate
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-react-website-frontend-app
+  template:
+    metadata:
+      labels:
+        app: my-react-website-frontend-app
+    spec:
+      containers:
+        - name: my-react-website-frontend-app
+          image: 030294069153.dkr.ecr.ap-south-1.amazonaws.com/web-react-website:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+          volumeMounts:
+            - name: logs-frontend
+              mountPath: /var/log/my-react-website-frontend-app
+      volumes:
+        - name: logs-frontend
+          emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-react-website-frontend-app
+spec:
+  type: NodePort
+  selector:
+    app: my-react-website-frontend-app
+  ports:
+    - name: website-port
+      port: 3000
+      targetPort: 3000

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background: #f3f4f6;
+  font-family: "Poppins", sans-serif;
+}
+
+.bg-gradient {
+  background: linear-gradient(158deg, rgba(1, 200, 248, 0.8407738095238095) 25%, rgba(1, 102, 195, 0.8099614845938375) 75%) !important;
+}
+
+.bti-main-menus {
+  position: relative;
+}
+
+.bti-main-nav {
+  margin: auto;
+  width: 100%;
+  background: #fff;
+  z-index: 9999;
+}
+
+.home-top-slider {
+  position: relative;
+}
+
+.home-top-slider-slide {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  height: 700px;
+}
+
+.slide-overlay-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #16253dd9;
+  height: 100%;
+  width: 70%;
+  clip-path: polygon(0 0, 87% 0, 100% 100%, 0% 100%);
+}
+
+.slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slick-next {
+  right: 10px !important;
+}
+.slick-prev:before, .slick-next:before {
+  color: #2563eb !important;
+}
+.slick-prev {
+  left: 0px !important;
+}
+.slick-next {
+  right: 0px !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

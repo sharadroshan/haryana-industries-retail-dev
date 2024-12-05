@@ -1,0 +1,74 @@
+.footer-section{
+    display: block;
+    z-index: 1;
+    background-image: url('/banner/blur.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.site-footer-bg{
+    background-image: url('/footer-bg.png');
+}
+.site-footer-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    mix-blend-mode: color-burn;
+    opacity: .15;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.footer-details p {
+   margin: 20px 0px;
+}
+.footer-details p svg {
+    width: 30px;
+    height: 30px;
+    stroke: #fff;
+}
+.newsletter {
+    position: relative;
+    border-radius: 9px;
+    height: 50px;
+}
+.newsletter input {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+}
+.newsletter input:focus {
+    box-shadow: none;
+    outline: none;
+}
+.newsletter svg {
+    height: 35px;
+    width: 35px;
+}
+.newsletter button {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 70px;
+}
+.social-icon .social-icon {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    padding: 0px;
+}
+.social-icon .social-icon svg{
+    width: 25px;
+    height: 25px;
+}
+/* .social-icon .social-icon svg path {
+    color: #12213a;
+} */

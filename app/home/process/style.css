@@ -1,0 +1,87 @@
+.process-box{
+    width: 200px;
+    cursor: pointer;
+}
+.process-col {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(223, 227, 231);
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 57px 0px rgb(0 0 0 / 10%);
+    height: 148px;
+    width: 148px;
+    margin: 0 auto;
+    z-index: 1;
+}
+.process-step-lable-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 50%;
+    color: #fff;
+}
+.process-step-lable-down {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 50%;
+    color: #fff;
+}
+.process-col svg {
+    width: 70px;
+    height: 70px;
+    stroke: #17243d;
+}
+.process-shape {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+}
+.process-shape img {
+    width: 70%;
+    margin: auto;
+}
+.process-box:hover .process-col {
+    background: #2563eb !important;
+    transition: 0.5s;
+}
+.process-box:hover h4 {
+    color: #2563eb !important;
+    transition: 0.5s;
+}
+.process-box:hover .process-col svg{
+    stroke: #fff !important;
+    width: 75px;
+    height: 75px;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 600px) {
+    .process-box {
+        width: 100%;
+    }
+    .process-shape{
+        display: none;
+    }
+  }
